@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var person = {
+        name: "Djokovic",
+        greet: function (theGreeting) {
+          console.log(theGreeting + " " + this.name + " !");
+        },
+      };
+      person.greet("Hey");
+
+      var anotherPerson = { name: "Federer" };
+      person.greet.call(anotherPerson, "Hola");
+    </script>
+  </head>
+  <body></body>
+</html>
