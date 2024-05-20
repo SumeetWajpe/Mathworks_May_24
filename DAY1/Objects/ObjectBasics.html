@@ -6,15 +6,39 @@
     <title>Document</title>
     <script>
       //1. Object Literal Syntax
-      var person = {
-        name: "Djokovic",
-        sport: "Tennis",
-        getDetails: function () {
-          console.log("The person " + this.name + " plays " + this.sport + "!");
-        },
-      };
+      //   var person = {
+      //     name: "Djokovic",
+      //     sport: "Tennis",
+      //     age: 36,
+      //     rankedNumberOne: true,
+      //     getDetails: function () {
+      //       console.log("The person " + this.name + " plays " + this.sport + "!");
+      //     },
+      //   };
 
-      person.getDetails();
+      //   person.getDetails();
+
+      //   var JSONData = JSON.stringify(person); // send to server
+      //   var jsObject = JSON.parse(JSONData); // data from server
+
+      // 2. Object Object (constructor)
+
+      //   var obj = new Object();
+      //   obj.xyz = "123";
+
+      // 3. Custom Constructor
+
+      function Car() {
+        this.name = "i20";
+        this.speed = 100;
+        this.accelerate = function () {
+          console.log(
+            "The car " + this.name + " is running @ " + this.speed + " kmph !",
+          );
+        };
+      }
+      var carObj = new Car();
+      carObj.accelerate();
     </script>
   </head>
   <body></body>
