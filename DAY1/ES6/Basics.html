@@ -37,21 +37,59 @@
       //   c.name = "XYZ";
 
       // Spread Operator - Arrays & Objects
-      var cars = ["BMW", "AUDI", "MERC"];
-      var moreCars = ["TATA", "MAHINDRA"];
-      var allCars = [...cars, ...moreCars];
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      //   var moreCars = ["TATA", "MAHINDRA"];
+      //   var allCars = [...cars, ...moreCars];
 
-      var person = {
-        name: "Djokovic",
-        age: 36,
-        isRankedOne: true,
-        sport: "Lawn Tennis",
-      };
-      var player = { ...person, sport: "Tennis" };
+      //   var person = {
+      //     name: "Djokovic",
+      //     age: 36,
+      //     isRankedOne: true,
+      //     sport: "Lawn Tennis",
+      //   };
+      //   var player = { ...person, sport: "Tennis" };
       //   person.name = "Novak Djokovic";
 
       // Destructuring - Arrays & Objects
-      
+
+      let cars = ["BMW", "AUDI", "MERC"];
+      //   let firstCar = cars[0];
+      //   let secondCar = cars[1];
+      // OR
+      let [firstCar, , secondCar] = cars;
+
+      //   // with object
+      //   let company = { name: "MathWorks", city: "Bengaluru" };
+      //   //   let name = company.name;
+      //   //   let city = company.city;
+      //   // OR
+      //   let { city } = company;
+
+      // nested
+
+      //   let company = {
+      //     name: "MathWorks",
+      //     city: "Bengaluru",
+      //     training: {
+      //       details: { name: "Advanced Javascript", duration: "5 Days" },
+      //     },
+      //   };
+
+      //   let {
+      //     training: {
+      //       details: { name: coursename },
+      //     },
+      //   } = company;
+
+      // use case
+
+      let company = { name: "MathWorks", city: "Bengaluru", isMNC: true };
+
+      function PrintCompany({ name, city }) {
+        console.log(name + ", " + city);
+      }
+
+      PrintCompany(company);
     </script>
   </head>
   <body></body>
