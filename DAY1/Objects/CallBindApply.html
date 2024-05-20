@@ -11,10 +11,15 @@
           console.log(theGreeting + " " + this.name + " !");
         },
       };
-      person.greet("Hey");
+      //   person.greet("Hey");
 
       var anotherPerson = { name: "Federer" };
-      person.greet.call(anotherPerson, "Hola");
+      person.greet.call(anotherPerson, "Hola"); // greet is called on anotherPerson as the context
+      person.greet.apply(anotherPerson, ["Hi"]);
+
+      var greetBindedWithAnotherPerson = person.greet.bind(anotherPerson);
+      // after 100 lines of code
+      greetBindedWithAnotherPerson("Bye");
     </script>
   </head>
   <body></body>
