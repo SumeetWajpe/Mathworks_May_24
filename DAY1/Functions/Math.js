@@ -1,7 +1,8 @@
 var MathModule = { PI: 3.14 };
 var MathModule = (function (m) {
+  var z = 10;
   m.Add = function (x, y) {
-    return x + y;
+    return x + y + z;
   };
 
   m.Product = function (x, y) {
