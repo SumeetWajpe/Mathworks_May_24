@@ -25,8 +25,33 @@
       //   }
 
       //   const PI;// Error
-      const PI = 3.14; // block scoping
+      // const PI = 3.14; // block scoping
       //   PI = 3.14534;
+
+      //   const company = { name: "MathWorks", location: "Bengaluru" };
+      //   company.name = "XYZ"; // Not an error
+      //   company = {};
+
+      //   let company = { name: "MathWorks", location: "Bengaluru" };
+      //   let c = company;
+      //   c.name = "XYZ";
+
+      // Spread Operator - Arrays & Objects
+      var cars = ["BMW", "AUDI", "MERC"];
+      var moreCars = ["TATA", "MAHINDRA"];
+      var allCars = [...cars, ...moreCars];
+
+      var person = {
+        name: "Djokovic",
+        age: 36,
+        isRankedOne: true,
+        sport: "Lawn Tennis",
+      };
+      var player = { ...person, sport: "Tennis" };
+      //   person.name = "Novak Djokovic";
+
+      // Destructuring - Arrays & Objects
+      
     </script>
   </head>
   <body></body>
