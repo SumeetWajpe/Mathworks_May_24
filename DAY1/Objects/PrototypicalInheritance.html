@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // var o = { name: "xyz" };
+      // var o = Object.create(null);
+
+      // var person = { name: "Djokovic", age: 36, isRankedOne: true };
+      // var player = Object.create(person);
+      // player.sport = "Lawn Tennis";
+
+      function Car(name, speed) {
+        this.name = name || "BMW";
+        this.speed = speed || 200;
+        this.accelerate = function () {
+          console.log(
+            "The car " + this.name + " is running @ " + this.speed + " kmph !",
+          );
+        };
+      }
+
+      function JamesBondCar() {
+        this.isArmed = false;
+      }
+
+      JamesBondCar.prototype = new Car();
+
+      var jbc = new JamesBondCar();
+      jbc.name = "Aston Martin";
+      jbc.speed = 300;
+      jbc.accelerate();
+    </script>
+  </head>
+  <body></body>
+</html>
