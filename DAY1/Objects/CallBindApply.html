@@ -20,6 +20,20 @@
       var greetBindedWithAnotherPerson = person.greet.bind(anotherPerson);
       // after 100 lines of code
       greetBindedWithAnotherPerson("Bye");
+
+      // Inheritance (using call)
+
+      function Shape() {
+        this.length = 10;
+        this.breadth = 10;
+      }
+
+      function Rect() {
+        Shape.call(this);
+        this.isSquare = false;
+      }
+
+      var r = new Rect();
     </script>
   </head>
   <body></body>
