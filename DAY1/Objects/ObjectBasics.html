@@ -40,12 +40,13 @@
       var carObj = new Car();
       carObj.accelerate();
 
+      function CallBack() {
+        console.log(this.salary);
+      }
+
       function Emp() {
         this.salary = 200000;
-        var _this = this;
-        setTimeout(function () {
-          console.log(_this.salary);
-        }, 2000);
+        setTimeout(CallBack.bind(this), 2000);
       }
       var emp = new Emp();
     </script>

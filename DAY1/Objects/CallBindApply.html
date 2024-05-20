@@ -17,7 +17,7 @@
       person.greet.call(anotherPerson, "Hola"); // greet is called on anotherPerson as the context
       person.greet.apply(anotherPerson, ["Hi"]);
 
-      var greetBindedWithAnotherPerson = person.greet.bind(anotherPerson);
+      var greetBindedWithAnotherPerson = person.greet.bind(anotherPerson); // returns a function that is binded with anotherPerson
       // after 100 lines of code
       greetBindedWithAnotherPerson("Bye");
 
