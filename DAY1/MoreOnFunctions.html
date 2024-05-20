@@ -8,16 +8,31 @@
       // Nested Functions
 
       function Outer() {
-        var outerVar = "Outer..";
+        var outerVar = "Outer.."; // closure variable
         return function () {
           console.log(outerVar);
-
           console.log("Inner..");
         };
       }
 
       var Inner = Outer();
+      // 100 lines of code
       Inner();
+
+      function Counter() {
+        var count = 0;
+        return function () {
+          console.log(++count);
+        };
+      }
+
+      var myCounter = Counter();
+      myCounter();
+      myCounter();
+      myCounter();
+      myCounter();
+      myCounter();
+      myCounter();
     </script>
   </head>
   <body></body>
