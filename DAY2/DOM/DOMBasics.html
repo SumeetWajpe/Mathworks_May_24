@@ -4,13 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      p {
+        border: 2px solid red;
+        padding: 5px;
+        margin: 5px;
+      }
+      .even {
+        border: 2px solid blue;
+      }
+      #para {
+        border: 2px dashed black;
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
     <p id="para"><strong>Static !</strong></p>
+    <!-- 
+    <div class="even">This is a Div - Div 1</div>
+    <div>This is a Div - Div 2</div>
+    <div>This is a Div - Div 3</div> -->
 
     <script>
-      let para = document.getElementById("para"); // DOM API
-      console.log(para.innerHTML);
+      //   let para = document.getElementById("para"); // DOM API
+      //   para.innerHTML = "Dynamic !";
+      //   para.className = "even";
+
+      //   let divs = document.getElementsByTagName("div");
+      //   for (let index = 0; index < divs.length; index++) {
+      //     console.log(divs[index].innerText);
+      //   }
+
+      //   let divs = document.getElementsByClassName("even");
+      let divs = document.querySelectorAll("div.even"); // HTML5
+      console.log(divs.length);
     </script>
   </body>
 </html>
