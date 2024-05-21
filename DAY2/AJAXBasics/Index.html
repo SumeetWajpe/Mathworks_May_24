@@ -7,8 +7,9 @@
     <script src="getData.js"></script>
     <script>
       console.log("Started..");
-      GetData(function (postsJSON) {
-        console.log(postsJSON);
+      GetData(function (err, postsJSON) {
+        if (postsJSON) console.log(postsJSON);
+        else console.log(err);
       });
       console.log("Ended..");
     </script>
