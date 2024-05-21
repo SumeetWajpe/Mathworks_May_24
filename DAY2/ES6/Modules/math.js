@@ -1,4 +1,4 @@
-export function Add(x, y) {
+export default function Add(x, y) {
   return x + y;
 }
 
@@ -7,3 +7,6 @@ export function Product(x, y) {
 }
 
 const PI = 3.14;
+
+// product.service.js
+// product.component.js
