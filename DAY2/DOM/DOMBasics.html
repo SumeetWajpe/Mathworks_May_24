@@ -27,9 +27,10 @@
     <div>This is a Div - Div 3</div> -->
 
     <script>
-      //   let para = document.getElementById("para"); // DOM API
-      //   para.innerHTML = "Dynamic !";
+      let para = document.getElementById("para"); // DOM API
+      para.innerHTML = "Dynamic !";
       //   para.className = "even";
+      para.setAttribute("class", "even");
 
       //   let divs = document.getElementsByTagName("div");
       //   for (let index = 0; index < divs.length; index++) {
@@ -37,8 +38,10 @@
       //   }
 
       //   let divs = document.getElementsByClassName("even");
-      let divs = document.querySelectorAll("div.even"); // HTML5
-      console.log(divs.length);
+      //   let divs = document.querySelectorAll("div.even"); // HTML5
+      //   console.log(divs.length);
+
+      //   let p = document.querySelector("#para");
     </script>
   </body>
 </html>
