@@ -13,18 +13,32 @@
       //   var Add = (x, y) => {
       //     return x + y;
       //   };
-      var Add = (x, y) => x + y;
-      console.log("The addition is : " + Add(20, 30));
+      //   var Add = (x, y) => x + y;
+      //   console.log("The addition is : " + Add(20, 30));
 
-      var cars = ["BMW", "AUDI", "MERC"];
-      //   cars.forEach(function (car) {
-      //     console.log(car);
-      //   });
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      //   //   cars.forEach(function (car) {
+      //   //     console.log(car);
+      //   //   });
 
-      // OR
-      cars.forEach(car => console.log(car));
-      var Test = () => console.log("Testing 1 2 3");
-      Test();
+      //   // OR
+      //   cars.forEach(car => console.log(car));
+      //   var Test = () => console.log("Testing 1 2 3");
+      //   Test();
+
+      // The Problem
+      //   function Emp() {
+      //     this.salary = 200000;
+      //     setTimeout(function () {
+      //       console.log(this.salary);
+      //     }, 2000);
+      //   }
+      // The Solution
+      function Emp() {
+        this.salary = 200000;
+        setTimeout(() => console.log(this.salary), 2000);
+      }
+      var emp = new Emp();
     </script>
   </head>
   <body></body>
