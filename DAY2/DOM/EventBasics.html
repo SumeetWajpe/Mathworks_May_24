@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      function ClickHandler() {
+      function ClickHandler(e = event) {
+        console.log(e);
         // biz logic
         let newLi = document.createElement("li");
         let newBeverageText = document.querySelector("#txtBeverage");
@@ -13,11 +14,14 @@
         let beverages = document.getElementById("beverages");
         beverages.appendChild(newLi);
       }
+      function InputHandler(e = event) {
+        console.log(e.target.value);
+      }
     </script>
   </head>
   <body>
     <label for="txtBeverage">Enter a beverage :</label>
-    <input type="text" id="txtBeverage" />
+    <input type="text" id="txtBeverage" oninput="InputHandler()" />
     <ul id="beverages">
       <li>Tea</li>
       <li>Coffee</li>
