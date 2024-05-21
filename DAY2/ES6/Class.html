@@ -11,19 +11,38 @@
       //   }
 
       class Car {
-        constructor(name, speed) {
+        constructor(name = "BMW", speed = 200) {
           this.name = name;
           this.speed = speed;
         }
         accelerate() {
-          console.log(
-            "The car " + this.name + " is running @ " + this.speed + " kmph !",
-          );
+          //   console.log(
+          //     "The car " + this.name + " is running @ " + this.speed + " kmph !",
+          //   );
+
+          return `The car ${this.name} is running @ ${this.speed} kmph !`;
         }
       }
 
-      var carObj = new Car("BMW", 200);
-      carObj.accelerate();
+      //   var carObj = new Car("BMW", 200);
+      //   carObj.accelerate();
+
+      class JamesBondCar extends Car {
+        constructor(name, speed, isArmed) {
+          super(name, speed);
+          this.isArmed = isArmed;
+        }
+        accelerate() {
+          return super.accelerate() + " Is it armed ? " + this.isArmed;
+        }
+      }
+      var jbc = new JamesBondCar("Aston Martin", 300, true);
+
+      // String Templates
+      //   var multiLineStr = `First Line
+      //   Second Line
+      //   Last Line !`;
+      //   console.log(multiLineStr);
     </script>
   </head>
   <body></body>
