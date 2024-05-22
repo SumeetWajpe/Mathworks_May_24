@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="getData.js"></script>
+    <script>
+      console.log("Started..");
+      let thePromise = GetData();
+      thePromise.then(
+        function (postsJSON) {
+          console.log(postsJSON);
+        },
+        function (err) {
+          console.log(err);
+        },
+      );
+      console.log("Ended..");
+    </script>
+  </head>
+  <body></body>
+</html>
