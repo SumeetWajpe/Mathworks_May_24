@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/postsss")
+        .then(res => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            // throw new Error("Something went wrong !" + res.status);
+            return Promise.reject("Something went wrong !" + res.status);
+          }
+        })
+        .then(posts => {
+          console.log("Within second .then success block !");
+          console.log(posts);
+        })
+        .catch(err => console.log(err));
+    </script>
+  </head>
+  <body></body>
+</html>
