@@ -8,11 +8,39 @@
     <script>
       console.log("Started..");
       GetData(function (err, postsJSON) {
-        if (postsJSON) console.log(postsJSON);
-        else console.log(err);
+        let postList = document.getElementById("postList");
+        let loader = document.getElementById("loader");
+        if (postsJSON) {
+          // post title in the UI | refactor into a method
+          var posts = JSON.parse(postsJSON);
+          loader.style.display = "none";
+          for (const post of posts) {
+            let newPost = document.createElement("li");
+            newPost.innerText = post.title;
+            postList.appendChild(newPost);
+          }
+        } else if (err) {
+          loader.style.display = "none";
+          let error = document.getElementById("error");
+          error.innerText = err;
+          error.style.color = "red";
+        }
       });
       console.log("Ended..");
     </script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>All Posts</h1>
+    </header>
+    <main>
+      <img
+        src="https://loading.io/assets/mod/spinner/spinner/lg.gif"
+        alt="Loading.."
+        id="loader"
+      />
+      <ul id="postList"></ul>
+      <p id="error"></p>
+    </main>
+  </body>
 </html>
