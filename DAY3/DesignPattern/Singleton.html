@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   var company = { name: "Mathworks" };
+
+      //   var singleTon = (function () {
+      //     return {
+      //       name: "Mathworks",
+      //       city: "Bengaluru",
+      //     };
+      //   })();
+
+      function GetInstance() {
+        this.instance = this.instance || null;
+        if (this.instance == null) {
+          this.instance = {
+            name: "Mathworks",
+            city: "Bengaluru",
+          };
+          return this.instance;
+        } else {
+          return this.instance;
+        }
+      }
+
+      let i = GetInstance();
+      i.city = "Hyderabad";
+      console.log(i);
+
+      let j = GetInstance();
+      j.city = "BNG";
+      console.log(j);
+
+      let k = GetInstance();
+      console.log(k);
+    </script>
+  </head>
+  <body></body>
+</html>
