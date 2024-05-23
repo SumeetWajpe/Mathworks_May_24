@@ -1,3 +1,5 @@
+/* This comment will not be a part of prod bundle.js */
+
 export class Point {
   constructor() {
     this.x = 100;
