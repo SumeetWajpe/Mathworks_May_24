@@ -1,7 +1,10 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #f7c01d;
+$primary-color: #201904;
 
 body {
     font: 100% $font-stack;
     color: $primary-color;
+}
+header{
+    border: 2px solid $primary-color;
 }
