@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var cityMap = new Map();
+      cityMap.set("Pune", "Maharashtra");
+      cityMap.set("Mumbai", "Maharashtra");
+      cityMap.set("Noida", "UP");
+      cityMap.set("Bengaluru", "Karnataka");
+      cityMap.set("Mumbai", "MH");
+
+      //   let itr = cityMap.entries();
+      //   console.log(itr.next().value[1]);
+
+      //   for (const o of cityMap) {
+      //     console.log(o);
+      //   }
+
+      let company = { name: "IBM", city: "Pune" };
+
+      var mySet = new Set();
+
+      mySet.add(company);
+      mySet.add(company);
+      mySet.add(company);
+
+      for (const o of mySet) {
+        console.log(o);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
