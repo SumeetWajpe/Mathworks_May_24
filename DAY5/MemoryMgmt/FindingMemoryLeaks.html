@@ -6,6 +6,7 @@
     <title>Document</title>
     <script>
       var largeArray = [];
+
       var isRunning = false;
 
       function GrowHandler() {
@@ -14,10 +15,11 @@
       }
 
       function GrowInSize() {
+        // var largeArray = []; // this would prevent memeory leak
+
         largeArray.push(new Array(20000).fill("*"));
-        if (isRunning) {
-          setTimeout(() => GrowInSize(), 2000);
-        }
+        // done with usage ! (only applicable if u know that largeArray is not used by other functions)
+        largeArray = null;
       }
 
       function StopHandler() {
